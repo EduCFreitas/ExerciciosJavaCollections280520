@@ -18,14 +18,16 @@ public class MinhasCollections {
 		System.out.println("\n--------------------\n");
 		
 		Set<Integer> meuSet = new HashSet<Integer>(); // Instanciamento do HashSet chamado meuSet
-		meuSet.add(1); // Adicion o valor 1 ao meuSet
-		meuSet.add(2); // Adicion o valor 2 ao meuSet
-		meuSet.add(3); // Adicion o valor 3 ao meuSet
-		meuSet.add(1); // Adicion o valor 1 ao meuSet, o qual será ignorado, visto que já existe um valor 1 e o HashSet armazena apenas valores exclusivos
+		meuSet.add(1); // Adiciona o valor 1 ao meuSet
+		meuSet.add(2); // Adiciona o valor 2 ao meuSet
+		meuSet.add(3); // Adiciona o valor 3 ao meuSet
+		meuSet.add(1); // Adiciona o valor 1 ao meuSet, o qual será ignorado, visto que já existe um valor 1 e o HashSet armazena apenas valores exclusivos
 		
+		int valor;
 		Iterator<Integer> iMeuSet = meuSet.iterator(); // Realiza a iteração em cada item do meuSet
 		while(iMeuSet.hasNext()){ // Visto que HashSet armazena apenas valores exclusivos, o valor 1 não se repete
-			System.out.println(iMeuSet.next()); // Mostra na tela o valor do próximo elemento do meuSet, enquanto houver um proximo elemento (método hasNext())
+			valor = iMeuSet.next(); // Variável valor recebe o próximo elemento de iMeuSet
+			System.out.println(valor); // Mostra na tela o valor do próximo elemento do meuSet, constante na variável valor, enquanto houver um proximo elemento (método hasNext())
 		}
 	}
 }
